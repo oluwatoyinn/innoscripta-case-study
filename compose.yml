@@ -1,13 +1,18 @@
 services:
   server:
     build:
-      context: .
-      dockerfile: ./server/Dockerfile
+      context: ./server
+      dockerfile: Dockerfile
     container_name: innoscripta-server
     ports:
       - "5000:5000"
-    networks:
-      - app-network
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    env_file:
+      - ./server/.env
+    environment:
+      - NODE_ENV=development
 
   client:
     build:
@@ -17,10 +22,12 @@ services:
     ports:
       - "5173:5173"
     command: npm run dev -- --host
+    volumes:
+      - .:/app
+      - /app/node_modules
     depends_on:
       - server
-    networks:
-      - app-network
-networks:
-  app-network:
-    driver: bridge
+
+volumes:
+  node_modules:
+
