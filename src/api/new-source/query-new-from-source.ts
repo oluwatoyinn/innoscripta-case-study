@@ -63,7 +63,7 @@
 //         author: article.fields?.byline || "Unknown",
 //         category: article.sectionName,
 //         date: new Date(article.webPublicationDate).toISOString().split("T")[0],
-//         imageUrl: article.fields?.thumbnail || "/api/placeholder/400/200",
+//         imageUrl: article.fields?.thumbnail || "https://placehold.co/600x400?text=Image+Not+Available&font=oswald",
 //         url: article.webUrl,
 //       }));
 
@@ -105,7 +105,7 @@
 //         author: article.fields?.byline || "Unknown",
 //         category: article.sectionName,
 //         date: new Date(article.webPublicationDate).toISOString().split("T")[0],
-//         imageUrl: article.fields?.thumbnail || "/api/placeholder/400/200",
+//         imageUrl: article.fields?.thumbnail || "https://placehold.co/600x400?text=Image+Not+Available&font=oswald",
 //         url: article.webUrl,
 //       }));
 
@@ -145,7 +145,7 @@
 //         author: article.author || "Unknown",
 //         category: category || "General",
 //         date: new Date(article.publishedAt).toISOString().split("T")[0],
-//         imageUrl: article.urlToImage || "/api/placeholder/400/200",
+//         imageUrl: article.urlToImage || "https://placehold.co/600x400?text=Image+Not+Available&font=oswald",
 //         url: article.url,
 //       }));
 //     } catch (error) {

@@ -32,7 +32,9 @@ export class GuardianNewsProvider implements NewsProvider {
       author: article.fields?.byline || "Unknown",
       category: article.sectionName,
       date: new Date(article.webPublicationDate).toISOString().split("T")[0],
-      imageUrl: article.fields?.thumbnail || "/api/placeholder/400/200",
+      imageUrl:
+        article.fields?.thumbnail ||
+        "https://placehold.co/600x400?text=Image+Not+Available&font=oswald",
       url: article.webUrl,
     };
   }

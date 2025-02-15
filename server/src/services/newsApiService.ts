@@ -30,7 +30,9 @@ export class NewsAPIProvider implements NewsProvider {
       author: article.author || "Unknown",
       category: article.category || "General",
       date: new Date(article.publishedAt).toISOString().split("T")[0],
-      imageUrl: article.urlToImage || "/api/placeholder/400/200",
+      imageUrl:
+        article.urlToImage ||
+        "https://placehold.co/600x400?text=Image+Not+Available&font=oswald",
       url: article.url,
     };
   }

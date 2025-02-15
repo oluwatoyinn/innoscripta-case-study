@@ -34,7 +34,8 @@ export class NYTimesNewsProvider implements NewsProvider {
       author: article.byline.original || "Unknown",
       category: article.section_name || "General",
       date: new Date(article.pub_date).toISOString().split("T")[0],
-      imageUrl: article.multimedia?.[0]?.url || "/api/placeholder/400/200",
+      imageUrl:
+        "https://placehold.co/600x400?text=Image+Not+Available&font=oswald",
       url: article.web_url,
     };
   }

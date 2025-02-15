@@ -16,7 +16,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
     <div className="relative">
       <input
         type="text"
-        placeholder="Search articles..."
+        placeholder="Search news..."
         className="w-full pl-10 pr-4 py-2 border rounded-lg"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}

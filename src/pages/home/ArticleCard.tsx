@@ -13,6 +13,7 @@ const ArticleCard = ({ article }: any) => {
         src={article.imageUrl}
         alt={article.title}
         className="w-full h-48 object-cover"
+         loading="lazy"
       />
       <div className="p-4">
         <div className="flex justify-between items-center mb-2">

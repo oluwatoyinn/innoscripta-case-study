@@ -14,3 +14,10 @@ export interface UserPreferences {
   preferredSources: string[];
   preferredCategories: string[];
 }
+
+export interface ButtonProps {
+  savedPreferences: () => void;
+  isSaving: boolean;
+  resetPreferences: () => void;
+  isResetting: boolean;
+}
